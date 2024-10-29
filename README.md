@@ -1,13 +1,122 @@
 # Praktikum4
 
-# Implementasi Diagram Class 
+
+# •  Implementasi Diagram Class 
 
 ![](DiagramClass.png)
 
 
-# Penjelasannya
 
 ![](BangunDatar.png).
+
+# I. Bangun Datar
+abstract class BangunDatar {
+    public abstract float luas();
+    public abstract float keliling();
+}
+
+
+![](Lingkaran.png).
+
+# II. Lingkaran
+class Lingkaran extends BangunDatar {
+    private final int r; // Radius
+
+    public Lingkaran(int r) {
+        this.r = r;
+    }
+
+    @Override
+    public float luas() {
+        return (float) (Math.PI * r * r);
+    }
+
+    @Override
+    public float keliling() {
+        return (float) (2 * Math.PI * r);
+    }
+}
+
+
+![](Segitiga.png).
+
+# III. Segitiga
+class Segitiga extends BangunDatar {
+    private final int alas;   
+    private final int tinggi; 
+
+    public Segitiga(int alas, int tinggi) {
+        this.alas = alas;
+        this.tinggi = tinggi;
+    }
+
+    @Override
+    public float luas() {
+        return 0.5f * alas * tinggi;
+    }
+
+    @Override
+    public float keliling() {
+        // Assuming an isosceles triangle for simplicity
+        double sisiMiring = Math.sqrt((alas / 2.0) * (alas / 2.0) + tinggi * tinggi);
+        return (float) (alas + 2 * sisiMiring);
+    }
+}
+
+
+![](Persegi.png).
+
+# IV. Persegi
+class Persegi extends BangunDatar {
+    private final int sisi; 
+
+    public Persegi(int sisi) {
+        this.sisi = sisi;
+    }
+
+    @Override
+    public float luas() {
+        return sisi * sisi;
+    }
+
+    @Override
+    public float keliling() {
+        return 4 * sisi;
+    }
+}
+
+
+![](Utama.png).
+
+# V. Utama
+public class Utama {
+    public static void main(String[] args) {
+        // Mengubah parameter sesuai permintaan
+        Lingkaran lingkaran = new Lingkaran(15);  
+        Segitiga segitiga = new Segitiga(10, 15); 
+        Persegi persegi = new Persegi(12);        
+
+        // Menampilkan luas dan keliling untuk setiap bentuk
+        System.out.println("Lingkaran:");
+        System.out.println("Luas: " + lingkaran.luas());
+        System.out.println("Keliling: " + lingkaran.keliling());
+
+        System.out.println("\nSegitiga:");
+        System.out.println("Luas: " + segitiga.luas());
+        System.out.println("Keliling: " + segitiga.keliling());
+
+        System.out.println("\nPersegi:");
+        System.out.println("Luas: " + persegi.luas());
+        System.out.println("Keliling: " + persegi.keliling());
+    }
+}
+
+
+# Hasil Output
+![](HasilOutput.png).
+
+
+# Penjelasannya
 
 # 1.  *Class Bangun Datar*
     • Fungsi: BangunDatar adalah Class abstrak yang menjadi dasar bagi berbagai bentuk dua dimensi seperti lingkaran, segitiga, dan persegi.
@@ -21,9 +130,6 @@
     • Tujuan: Karena kelas ini abstrak, ia tidak dapat di-instantiate (dibuat objeknya) secara langsung. 
      Kelas ini digunakan sebagai dasar (parent class) untuk bentuk-bentuk lain yang akan mengimplementasikan cara khusus untuk menghitung luas dan keliling masing-masing bentuk.
 
-
-
-![](Lingkaran.png).
     
 # 2.  *Class Lingkaran*
     • Fungsi: Class Lingkaran adalah subclass (turunan) dari BangunDatar dan mengimplementasikan metode luas() dan keliling() khusus untuk lingkaran.
@@ -38,9 +144,6 @@
  
     • Tujuan: Untuk menghitung luas dan keliling dari lingkaran berdasarkan jari-jari yang diberikan.
 
-
-
-![](Segitiga.png).
 
 # 3.  *Class Segitiga*
     • Fungsi: Class Segitiga adalah subclass dari BangunDatar dan mengimplementasikan metode luas() dan keliling() khusus untuk segitiga.
@@ -58,9 +161,6 @@
     • Tujuan: Untuk menghitung luas dan keliling dari segitiga dengan asumsi segitiga sama kaki.
 
 
-
-![](Persegi.png).
-
 # 4.  *Class Persegi*
     • Fungsi: Class Persegi adalah subclass dari BangunDatar dan mengimplementasikan metode luas() dan keliling() khusus untuk persegi.
   
@@ -74,9 +174,6 @@
    
     • Tujuan: Untuk menghitung luas dan keliling dari persegi berdasarkan panjang sisi yang diberikan.
 
-
-
-![](Utama.png).
 
 # 5.  *Class Utama*
     • Fungsi: Class ini adalah titik masuk utama (main class) dari program, di mana program akan dijalankan. Kelas ini mengandung metode main() yang menjalankan keseluruhan kode.
