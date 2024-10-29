@@ -7,18 +7,19 @@
 
 
 
+# I. Bangun Datar
+
 ![](BangunDatar.png).
 
-# I. Bangun Datar
 abstract class BangunDatar {
     public abstract float luas();
     public abstract float keliling();
 }
 
+# II. Lingkaran
 
 ![](Lingkaran.png).
 
-# II. Lingkaran
 class Lingkaran extends BangunDatar {
     private final int r; // Radius
 
@@ -38,9 +39,10 @@ class Lingkaran extends BangunDatar {
 }
 
 
+# III. Segitiga
+
 ![](Segitiga.png).
 
-# III. Segitiga
 class Segitiga extends BangunDatar {
     private final int alas;   
     private final int tinggi; 
@@ -63,10 +65,10 @@ class Segitiga extends BangunDatar {
     }
 }
 
+# IV. Persegi
 
 ![](Persegi.png).
 
-# IV. Persegi
 class Persegi extends BangunDatar {
     private final int sisi; 
 
@@ -85,10 +87,10 @@ class Persegi extends BangunDatar {
     }
 }
 
+# V. Utama
 
 ![](Utama.png).
 
-# V. Utama
 public class Utama {
     public static void main(String[] args) {
         // Mengubah parameter sesuai permintaan
@@ -113,12 +115,12 @@ public class Utama {
 
 
 # Hasil Output
+
 ![](HasilOutput.png).
 
 
 # Penjelasannya
-
-# 1.  *Class Bangun Datar*
+ # 1.  *Class Bangun Datar*
     • Fungsi: BangunDatar adalah Class abstrak yang menjadi dasar bagi berbagai bentuk dua dimensi seperti lingkaran, segitiga, dan persegi.
 
     • Isi: Class ini memiliki dua metode abstrak:
@@ -131,7 +133,7 @@ public class Utama {
      Kelas ini digunakan sebagai dasar (parent class) untuk bentuk-bentuk lain yang akan mengimplementasikan cara khusus untuk menghitung luas dan keliling masing-masing bentuk.
 
     
-# 2.  *Class Lingkaran*
+ # 2.  *Class Lingkaran*
     • Fungsi: Class Lingkaran adalah subclass (turunan) dari BangunDatar dan mengimplementasikan metode luas() dan keliling() khusus untuk lingkaran.
   
     • Isi:
@@ -145,7 +147,7 @@ public class Utama {
     • Tujuan: Untuk menghitung luas dan keliling dari lingkaran berdasarkan jari-jari yang diberikan.
 
 
-# 3.  *Class Segitiga*
+ # 3.  *Class Segitiga*
     • Fungsi: Class Segitiga adalah subclass dari BangunDatar dan mengimplementasikan metode luas() dan keliling() khusus untuk segitiga.
    
     • Isi:
@@ -161,7 +163,7 @@ public class Utama {
     • Tujuan: Untuk menghitung luas dan keliling dari segitiga dengan asumsi segitiga sama kaki.
 
 
-# 4.  *Class Persegi*
+ # 4.  *Class Persegi*
     • Fungsi: Class Persegi adalah subclass dari BangunDatar dan mengimplementasikan metode luas() dan keliling() khusus untuk persegi.
   
     • Isi:
@@ -175,7 +177,7 @@ public class Utama {
     • Tujuan: Untuk menghitung luas dan keliling dari persegi berdasarkan panjang sisi yang diberikan.
 
 
-# 5.  *Class Utama*
+ # 5.  *Class Utama*
     • Fungsi: Class ini adalah titik masuk utama (main class) dari program, di mana program akan dijalankan. Kelas ini mengandung metode main() yang menjalankan keseluruhan kode.
     
     • Isi:
@@ -187,6 +189,7 @@ public class Utama {
 
 
 
+# Penjelasan Hasil Output
 
 ![](HasilOutput.png).
 
