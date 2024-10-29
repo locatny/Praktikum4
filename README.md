@@ -4,6 +4,7 @@
 
 ![](DiagramClass.png)
 
+
 # Penjelasannya
 
 ![](BangunDatar.png).
@@ -21,6 +22,7 @@
      Kelas ini digunakan sebagai dasar (parent class) untuk bentuk-bentuk lain yang akan mengimplementasikan cara khusus untuk menghitung luas dan keliling masing-masing bentuk.
 
 
+
 ![](Lingkaran.png).
     
 # 2.  *Class Lingkaran*
@@ -35,6 +37,7 @@
         • keliling(): Menghitung keliling lingkaran menggunakan rumus 2 x π x r.
  
     • Tujuan: Untuk menghitung luas dan keliling dari lingkaran berdasarkan jari-jari yang diberikan.
+
 
 
 ![](Segitiga.png).
@@ -55,6 +58,7 @@
     • Tujuan: Untuk menghitung luas dan keliling dari segitiga dengan asumsi segitiga sama kaki.
 
 
+
 ![](Persegi.png).
 
 # 4.  *Class Persegi*
@@ -71,6 +75,7 @@
     • Tujuan: Untuk menghitung luas dan keliling dari persegi berdasarkan panjang sisi yang diberikan.
 
 
+
 ![](Utama.png).
 
 # 5.  *Class Utama*
@@ -82,6 +87,8 @@
         • Menampilkan hasil perhitungan luas() dan keliling() untuk setiap objek yang dibuat.
     
     • Tujuan: Untuk menguji fungsi dari setiap bentuk dengan menampilkan luas dan keliling dari masing-masing bentuk.
+
+
 
 
 ![](HasilOutput.png).
@@ -110,15 +117,20 @@ Hasil:
     • Keliling (Perimeter) dihitung dengan asumsi segitiga sama kaki:
 
       1. Hitung panjang sisi miring (hypotenuse), yang merupakan panjang dari alas ke ujung tertinggi segitiga. Dengan menggunakan rumus Pythagoras:
+
  sisiMiring = 
-             ![](SisiMiring1.png).
+                 ![](SisiMiring1.png).
+      
       Dengan alas = 10 dan tinggi = 15
+ 
  sisiMiring = 
-              ![](SisiMiring2.png).
+                  ![](SisiMiring2.png).
+              
       2. Hitung keliling dengan menambahkan alas dan dua kali panjang sisi miring:
                                           keliling = alas + 2 x sisiMiring = 10 + 2 x 15.59017 = 41.18034
 Hasil:
   • Luas: 75.0
+ 
   • Keliling: 41.18034
 
 # 3.  *Persegi*  dengan sisi = 12
@@ -132,4 +144,5 @@ Hasil:
                                           keliling = 4 x 12 = 48.0
 Hasil:
   • Luas: 144.0
+ 
   • Keliling: 48.0
